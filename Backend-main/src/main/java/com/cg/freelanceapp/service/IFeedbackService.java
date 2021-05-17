@@ -11,7 +11,7 @@ import com.cg.freelanceapp.entities.Freelancer;
 @Service
 public interface IFeedbackService {
 
-	int averageRating(Freelancer freelancer);
+	float averageRating(Long id);
 
 	Feedback createFeedback(FeedbackDTO feedbackDto);
 

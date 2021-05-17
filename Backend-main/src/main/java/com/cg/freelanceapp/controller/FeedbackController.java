@@ -32,4 +32,10 @@ public class FeedbackController {
 		
 		return new ResponseEntity<>(feedbackService.findFeedbacksByFreelancer(freelancerId), HttpStatus.OK);
 	}
+	
+	@GetMapping("/get/rating/{freelancerId}")
+	public ResponseEntity<Object> getAverageRating(@PathVariable Long freelancerId){
+		return new ResponseEntity<>(feedbackService.averageRating(freelancerId),HttpStatus.OK);
+	}
+	
 }
