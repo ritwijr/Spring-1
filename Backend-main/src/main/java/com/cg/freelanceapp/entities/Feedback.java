@@ -36,7 +36,7 @@ public class Feedback implements Serializable {
 
 	@ManyToOne(cascade = CascadeType.ALL, targetEntity = Recruiter.class)
 	@JoinColumn(name = "recruiter_id")
-	@JoinColumn(nullable = false)
+	@Column(nullable = false)
 	Recruiter createdBy;
 
 	@ManyToOne(cascade = CascadeType.ALL, targetEntity = Freelancer.class)
